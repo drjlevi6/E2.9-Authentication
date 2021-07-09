@@ -1,6 +1,6 @@
 const passport = require('passport'),
     LocalStrategy = require('passport-local').Strategy,
-    Models = require('models.js'),
+    Models = require('./models.js'),
     passportJWT = require('passport-jwt');
 
 let Users = Models.User,
@@ -25,7 +25,7 @@ passport.use(new LocalStrategy({
     		});
     	}
     	
-    	conbsole.log('finished');
+    	console.log('finished');
     	return callback(null, user);
     })	// [end Users.findOne()]
     
